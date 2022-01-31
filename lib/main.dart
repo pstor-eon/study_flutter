@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp (MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const ({ Key? key }) : super(key: key);
+  const MyApp({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +11,20 @@ class MyApp extends StatelessWidget {
       title: 'First app',
       theme: ThemeData(
         primarySwatch: Colors.blue
+      ),
+    home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('First'),
       ),
       
     );
